@@ -46,22 +46,29 @@
 
                 <!-- Memory part -->
                 <div class="memory-part mt-5">
-                    <button type="button" class="btn btn-outline-dark">8GB unified memory</button>
-                    <button type="button" class="btn btn-outline-dark">16GB unified memory</button>
+                    <button type="button" onclick="memoryCost(0)" class="btn btn-outline-dark">8GB unified
+                        memory</button>
+                    <button type="button" onclick="memoryCost(100)" class="btn btn-outline-dark">16GB unified
+                        memory</button>
                 </div>
 
                 <!-- storage Part -->
 
                 <div class="storage-part mt-5">
-                    <button type="button" class="btn btn-outline-dark">256GB SSD storage</button>
-                    <button type="button" class="btn btn-outline-dark">256GB SSD storage</button>
-                    <button type="button" class="btn btn-outline-dark">256GB SSD storage</button>
+                    <button type="button" onclick="storageCost(0)" class="btn btn-outline-dark">256GB SSD
+                        storage</button>
+                    <button type="button" onclick="storageCost(100)" class="btn btn-outline-dark">512GB SSD
+                        storage</button>
+                    <button type="button" onclick="storageCost(180)" class="btn btn-outline-dark">1TB SSD
+                        storage</button>
                 </div>
                 <!-- Delivery part -->
 
-                <div class="storage-part mt-5">
-                    <button type="button" class="btn btn-outline-dark">Friday, Aug 25 FREE Prime Delivery</button>
-                    <button type="button" class="btn btn-outline-dark">Friday, Aug 21 Delivery Charge $20</button>
+                <div class="delivery-part mt-5">
+                    <button type="button" onClick="deliveryCost(0)" class="btn btn-outline-dark">Friday, Aug 25 FREE
+                        Prime Delivery</button>
+                    <button type="button" onClick="deliveryCost(20)" class="btn btn-outline-dark">Friday, Aug 21
+                        Delivery Charge $20</button>
 
                 </div>
 
@@ -77,19 +84,19 @@
                         <hr>
                         <div class="d-flex justify-content-between px-3">
                             <p>Extra Memory Cost</p>
-                            <p>$ <span>0</span> </p>
+                            <p>$ <span id="memory-cost">0</span> </p>
                         </div>
                         <hr>
 
                         <div class="d-flex justify-content-between px-3">
                             <p>Extra Storage Cost</p>
-                            <p>$ <span>0</span> </p>
+                            <p>$ <span id="storage-cost">0</span> </p>
                         </div>
                         <hr>
 
                         <div class="d-flex justify-content-between px-3">
                             <p>Delivery charge</p>
-                            <p>$ <span>0</span> </p>
+                            <p>$ <span id="delivery-charge">0</span> </p>
                         </div>
                         <hr style="border:2px solid black">
 
