@@ -54,7 +54,7 @@ function applyPromo() {
     console.log("clicked");
     let promoCode = document.getElementById('promo-code').value;
     if (promoCode === "stevekaku") {
-        let finalPrice = parseInt(document.getElementById('final-price').innerText);
+        let finalPrice = parseInt(document.getElementById('total-cost').innerText);
         let updateFinalPrice = finalPrice * 0.8;
         document.getElementById('final-price').innerText = updateFinalPrice;
         document.getElementById('apply-promo').disabled = true;
