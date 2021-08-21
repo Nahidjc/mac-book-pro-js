@@ -32,7 +32,33 @@ function totalPriceUpdate() {
 // apply valid promo code
 
 
-document.getElementById('apply-promo').addEventListener('click', function () {
+document.getElementById('promo-code').addEventListener('keyup', function () {
+
     let promoCode = document.getElementById('promo-code').value;
     console.log(promoCode);
+    if (promoCode === "stevekaku") {
+        document.getElementById('apply-promo').removeAttribute('disabled');
+
+    } else {
+        document.getElementById('apply-promo').disabled = true;
+    }
+
+
 })
+
+
+document.getElementById('apply-promo').addEventListener('click', applyPromo);
+
+
+function applyPromo() {
+    console.log("clicked");
+    let promoCode = document.getElementById('promo-code').value;
+    if (promoCode === "stevekaku") {
+        let finalPrice = parseInt(document.getElementById('final-price').innerText);
+        let updateFinalPrice = finalPrice * 0.8;
+        document.getElementById('final-price').innerText = updateFinalPrice;
+        document.getElementById('apply-promo').disabled = true;
+        document.getElementById('promo-code').value = '';
+
+    }
+}
